@@ -6,7 +6,7 @@ var hbs = require('express-handlebars')
 //this is the handlbars view engine
 var path = require('path')
 //The default operation of the path module varies based on the operating system on which a Node.js application is running. Specifically, when running on a Windows operating system, the path module will assume that Windows-style paths are being used. or mac/linux etc.
-
+var weather
 
 var data = require('./data')
 // node.js require is a simple way of loading a module you exported in your hbs file. So this loads the data
@@ -34,6 +34,9 @@ app.get('/data/:id', function (req,res) {
   //and then uses the key/value provided by data module exported (id:1 etc) to find the correct value.
 
 })
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.listen(3001, function () {
   console.log('Listening on 3001')
