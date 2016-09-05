@@ -6,13 +6,12 @@
   </head>
   <body>
     <h2>Jaive's Blog</h2>
-    <ul>
-      {{#each data}}
-<!-- each is the hbs file( handlebar) way of doing loops -->
-      <li><a href="data/{{id}}">{{title}}</a></li>
-      <!--  this is how we know what to the handler will work on as we process as the server processes the client file -->
-      {{/each}}
-      </ul>
-
-  </body>
-</html>
+      <ul><table style="width:100%", border="1">
+            {{#each data}}
+            <tr>
+              <td><a href="data/{{id}}">{{title}}</a></td>
+              <td>{{content}}</td>
+            </tr>
+          {{/each}}
+            </ul>
+      </table>
