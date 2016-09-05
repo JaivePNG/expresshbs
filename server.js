@@ -28,6 +28,13 @@ app.get('/', function (req, res) {
     //renders a view and sends the rendered view to the client.
 })
 
+app.get('/data/:id', function (req,res) {
+  res.render('blogs', data.data[req.params.id])
+  //renders a view through blogs.hbs and sends the rendered view to the client.
+  //and then uses the key/value provided by data module exported (id:1 etc) to find the correct value.
+
+})
+
 app.listen(3001, function () {
   console.log('Listening on 3001')
   console.log(path.basename)

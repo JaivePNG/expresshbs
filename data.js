@@ -1,12 +1,15 @@
 module.exports = {
   data: [
-  {title: 'The first blog',
+  {id:0,
+    title: 'The first blog',
   content: 'my first blog'
   },
-  {title: 'The second blog',
+  {id:1,
+    title: 'The second blog',
   content: 'my second blog'
   },
-  {title: 'The third blog',
+  {id: 2,
+  title: 'The third blog',
   content: 'my second blog'
   },
   ]
